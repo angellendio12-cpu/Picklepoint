@@ -1,0 +1,4 @@
+let a=0,b=0,s='A',n=1;const $=id=>document.getElementById(id);
+function applyNames(){$('nameA').textContent=$('teamAName').value;$('nameB').textContent=$('teamBName').value;u();}
+function u(){$('scoreA').textContent=a;$('scoreB').textContent=b;$('server').textContent=s==='A'?$('nameA').textContent:$('nameB').textContent;$('serverNum').textContent=n;if((a>=11||b>=11)&&Math.abs(a-b)>=2){$('winner').textContent=(a>b?$('nameA').textContent:$('nameB').textContent)+' Wins!';}}
+function add(t){t==='A'?a++:b++;u()}function toggleServer(){s=s==='A'?'B':'A';u()}function toggleServerNum(){n=n===1?2:1;u()}function resetGame(){a=b=0;s='A';n=1;$('winner').textContent='';u()}u();

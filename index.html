@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pickleball Scoreboard</title><link rel="stylesheet" href="style.css"></head>
+<body><h1>🏓 Pickleball Scoreboard</h1>
+<input id="teamAName" placeholder="Team A" value="Team A">
+<input id="teamBName" placeholder="Team B" value="Team B">
+<button onclick="applyNames()">Start Match</button>
+<h2 id="nameA">Team A</h2><div id="scoreA">0</div><button onclick="add('A')">+ Point</button>
+<h2 id="nameB">Team B</h2><div id="scoreB">0</div><button onclick="add('B')">+ Point</button>
+<p>Serving: <span id="server">Team A</span> | Server <span id="serverNum">1</span></p>
+<button onclick="toggleServer()">Switch Server</button>
+<button onclick="toggleServerNum()">1st/2nd Server</button>
+<button onclick="resetGame()">Reset</button>
+<h2 id="winner"></h2>
+<script src="script.js"></script></body></html>
